@@ -22,7 +22,8 @@ mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  // origin: 'http://localhost:3000',
+  origin: 'https://car-reseller-api.herokuapp.com',
   credentials: true,
 };
 
