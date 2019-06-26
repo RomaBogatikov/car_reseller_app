@@ -20,10 +20,10 @@ mongoose.connection.once('open', () => {
 mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'));
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-
+const host = process.env.HOST || 'http://localhost:3000';
 const corsOptions = {
   // origin: 'http://localhost:3000',
-  origin: 'https://car-reseller-client.herokuapp.com',
+  origin: host,
   credentials: true,
 };
 
